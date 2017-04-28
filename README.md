@@ -6,7 +6,9 @@ This is the chat logging daemon for saving, writing, and reading chat logs in a 
 
 ## Build Status
 
-Coming Soon!
+| Master | Develop |
+|:------:|:-------:|
+| [![Build Status](https://travis-ci.org/celestialstats/logreceiver.svg?branch=master)](https://travis-ci.org/celestialstats/logreceiver) | [![Build Status](https://travis-ci.org/celestialstats/logreceiver.svg?branch=develop)](https://travis-ci.org/celestialstats/logreceiver) |
 
 ## License
 
