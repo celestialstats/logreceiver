@@ -9,10 +9,11 @@ services:
   - docker
 
 before_install:
+  - export TAG=`if [ "$TRAVIS_BRANCH" == "master" ]; then echo "latest"; else echo $TRAVIS_BRANCH ; fi`
   - docker login --username "$DOCKER_HUB_USERNAME" --password "$DOCKER_HUB_PASSWORD"
 
 script:
-  - docker build --no-cache -t celestialstats/logreceiver:latest .
+  - docker build --no-cache -t celestialstats/logreceiver:$TAG .
 
 after_success:
-  - docker push celestialstats/logreceiver:latest
+  - docker push celestialstats/logreceiver:$TAG
